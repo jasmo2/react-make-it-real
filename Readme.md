@@ -38,3 +38,16 @@ npm run eject - permite cambiar manualmente las librerías y configuración que 
 
 Esto es una de las caracteristicas que mejor hace y tiene `create-react-app`. Este feature
 lo que hace es ayudarnos al desarrollo, ya que refreseca cuando se graba parte del código nuevo.
+
+---
+
+## JSX
+
+[Babel Recurso](https://babeljs.io/repl#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwEwlgbgfAFgpgGwQewAQFcB2JnAPTjRA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.9.0&externalPlugins=)
+
+### Diferencias con HTML
+
+Todas las Etiquetas deben estar cerradas.
+
+> `<img src='algo.png'/>` √
+> `<img src='algo.png'>` X
