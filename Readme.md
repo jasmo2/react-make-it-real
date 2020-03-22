@@ -47,7 +47,122 @@ lo que hace es ayudarnos al desarrollo, ya que refreseca cuando se graba parte d
 
 ### Diferencias con HTML
 
-Todas las Etiquetas deben estar cerradas.
+> [diferences.js](./2-differences/src/App.js)
 
-> `<img src='algo.png'/>` √
-> `<img src='algo.png'>` X
+### Todas las Etiquetas deben estar cerradas.
+
+##### JSX (javascript and XML)
+
+> `<img src='algo.png'/>`
+
+##### HTML
+
+> `<img src='algo.png'>`
+
+### usar una clase CSS
+
+##### JSX
+
+> `<div className="App"></div>`
+
+##### HTML
+
+> `<div class="App"></div>`
+
+Dado que en JS **class** ya es una palabra reservada.
+
+---
+
+### Los elementos en JSX deben estar envueltos por un elemento.
+
+En este ekemplo vemos dos parrafos. Pero estos 2 parrafos deben estar envueltos
+por un elemento HTML, por ejemplo un `<div/>` .
+
+###### Hay otra forma de envolver los elementos hermanos
+
+##### JSX
+
+```
+<div>
+  <p>Hola</p>
+  <p>Mundo</p>
+</div>
+```
+
+##### HTML
+
+```
+  <p>Hola</p>
+  <p>Mundo</p>
+```
+
+Ahora veamos como lo transforma en JS
+
+[Babel Recurso](https://babeljs.io/repl#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwEwlgbgfAFgpgGwQewAQFcB2JnAPTjRA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.9.0&externalPlugins=)
+
+## JS en JSX
+
+### Variables
+
+Puedes crear variables y escribir sobre el JSX: ejemplo
+
+```
+const style = "active";
+const title = "Hola Mundo";
+
+<div className={style}>{title}</div>;
+```
+
+##### Manos a la obra
+
+##### Crear un div el cual imprima una operación matematica.
+
+### Arreglos
+
+En los arreglos debemos tener encuenta que **_JSX_** siempre espera un arreglo en forma
+de XML en sus elementos.
+
+```
+const names = ["Daniel", "Juan", "Alejandro"];
+
+const jsx = (
+  <ul>
+    {names.map((name) =>
+      <li>{name}</li>
+    )}
+  </ul>
+);
+```
+
+`{names.map((name) => <div>...</div>`
+
+> Manos a la acción, en el archivo [diferences.js](./2-differences/src/App.js)
+> generemos parrafos apartir de la variable `parragraphs`
+
+## Estilos enlinea
+
+```
+let styles = {
+  borderColor: "#daae33"
+};
+
+const jsx = (
+  <div style={styles}>
+    Hola mundo
+  </div>
+);
+```
+
+## Eventos
+
+Tener encuenta que son los mismos que cuando controlamos el DOM pero con camelCase.
+
+- onclick
+- onchange
+- onkeydown
+- etc...
+
+````
+const saluda = () => alert("Hola!");
+<button onClick={saluda}></button>```
+````
