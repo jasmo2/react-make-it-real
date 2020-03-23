@@ -224,3 +224,7 @@ class Library extends Component {
 ##### Estados
 
 Ejercicio, ahora actualicemos arreglos y objectos literales.
+
+---
+
+Dentro de estos estados manejemos un Formulario y veamos.
