@@ -228,3 +228,21 @@ Ejercicio, ahora actualicemos arreglos y objectos literales.
 ---
 
 Dentro de estos estados manejemos un Formulario y veamos.
+
+##### Ej: Crear varios 'inputs' y manejar los estados
+
+# React Hooks
+
+Cambiemos todo el concepto. _**React Hooks**_ se puede usar desde _React 16.8_.
+Dado que el paradigma ha venido cambiando hacia ser funcional más que orientado a clases.
+Los **Hooks** hacen más sentido que tener que usar clases como lenguajes de programación.
+Ya que JS en la actulidad(2020) se orienta a funciones, y trata de ser funcional.
+
+## State
+
+Se usa `const [val, setVal] = useState(initValue)` el cual recibe un valor de inicialización y devuelve
+2 parametros, el 1º es el valor que se actuliza y el segundo es la función encargada de actulizar el valor.
+
+Miremos el ejemplo aquí: [https://codesandbox.io/s/admiring-haslett-teusl](https://codesandbox.io/s/admiring-haslett-teusl)
+
+##### Ex: hagamos un componente similar a Form pero que sea React-Hooks
