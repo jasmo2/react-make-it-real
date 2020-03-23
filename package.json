@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "react first steps.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jasmo2/react-make-it-real.git"
@@ -15,10 +12,31 @@
     "nodejs",
     "create-react-app"
   ],
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "author": "jasmo2",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jasmo2/react-make-it-real/issues"
   },
-  "homepage": "https://github.com/jasmo2/react-make-it-real#readme"
+  "homepage": "https://github.com/jasmo2/react-make-it-real#readme",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "prettier": "2.0.1"
+  }
 }

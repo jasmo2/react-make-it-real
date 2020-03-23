@@ -22,7 +22,7 @@ defecto:
 - _PostCSS_: Procesamiento de CSS
 - _Jest_: Librería de pruebas.
 
-### Comencemos
+#### Comencemos
 
 Creemos un projecto en con el CLI de create react-app
 
@@ -34,38 +34,38 @@ npm run eject - permite cambiar manualmente las librerías y configuración que 
 // Ten cuidado con este comando, una vez lo ejecutas no hay marcha atrás.
 ```
 
-### Hotreload
+#### Hotreload
 
 Esto es una de las caracteristicas que mejor hace y tiene `create-react-app`. Este feature
 lo que hace es ayudarnos al desarrollo, ya que refreseca cuando se graba parte del código nuevo.
 
 ---
 
-## JSX
+### JSX
 
 [Babel Recurso](https://babeljs.io/repl#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwEwlgbgfAFgpgGwQewAQFcB2JnAPTjRA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.9.0&externalPlugins=)
 
-### Diferencias con HTML
+#### Diferencias con HTML
 
 > [diferences.js](./2-differences/src/App.js)
 
-### Todas las Etiquetas deben estar cerradas.
+#### Todas las Etiquetas deben estar cerradas.
 
-##### JSX (javascript and XML)
+###### JSX (javascript and XML)
 
 > `<img src='algo.png'/>`
 
-##### HTML
+###### HTML
 
 > `<img src='algo.png'>`
 
 ### usar una clase CSS
 
-##### JSX
+###### JSX
 
 > `<div className="App"></div>`
 
-##### HTML
+###### HTML
 
 > `<div class="App"></div>`
 
@@ -73,14 +73,14 @@ Dado que en JS **class** ya es una palabra reservada.
 
 ---
 
-### Los elementos en JSX deben estar envueltos por un elemento.
+#### Los elementos en JSX deben estar envueltos por un elemento.
 
 En este ekemplo vemos dos parrafos. Pero estos 2 parrafos deben estar envueltos
 por un elemento HTML, por ejemplo un `<div/>` .
 
 ###### Hay otra forma de envolver los elementos hermanos
 
-##### JSX
+###### JSX
 
 ```
 <div>
@@ -89,7 +89,7 @@ por un elemento HTML, por ejemplo un `<div/>` .
 </div>
 ```
 
-##### HTML
+###### HTML
 
 ```
   <p>Hola</p>
@@ -100,9 +100,9 @@ Ahora veamos como lo transforma en JS
 
 [Babel Recurso](https://babeljs.io/repl#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwEwlgbgfAFgpgGwQewAQFcB2JnAPTjRA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.9.0&externalPlugins=)
 
-## JS en JSX
+### JS en JSX
 
-### Variables
+#### Variables
 
 Puedes crear variables y escribir sobre el JSX: ejemplo
 
@@ -113,7 +113,7 @@ const title = "Hola Mundo";
 <div className={style}>{title}</div>;
 ```
 
-##### Manos a la obra
+###### Manos a la obra
 
 ##### Crear un div el cual imprima una operación matematica.
 
@@ -139,7 +139,7 @@ const jsx = (
 > Manos a la acción, en el archivo [diferences.js](./2-differences/src/App.js)
 > generemos parrafos apartir de la variable `parragraphs`
 
-## Estilos enlinea
+### Estilos enlinea
 
 ```
 let styles = {
@@ -153,7 +153,7 @@ const jsx = (
 );
 ```
 
-## Eventos
+### Eventos
 
 Tener encuenta que son los mismos que cuando controlamos el DOM pero con camelCase.
 
@@ -167,14 +167,14 @@ const saluda = () => alert("Hola!");
 <button onClick={saluda}></button>```
 ````
 
-# Componentes EN JSX
+## Componentes EN JSX
 
 Los componentes son formas de encapsular las logica de nuestros pedasos de UI
 y reutilizarlos más adelantes.
 
-## Stateless Components y Statefull components
+### Stateless Components y Statefull components
 
-### Stateless
+#### Stateless
 
 ```
 const Title = (props) => {
@@ -185,9 +185,11 @@ const Title = (props) => {
 Usualmente este componentes son solo usados para pintar y
 no tienen ningún tipo de logica.
 
-### Statefull
+#### Statefull
 
-Estos tienen usualmente logic de alguna indole.
+Estos tienen usualmente logic de alguna indole. y poseen ciclos de vida de ReactJS
+
+> [Ciclos de Vida](https://www.w3schools.com/react/react_lifecycle.asp)
 
 ```
 class Library extends Component {
@@ -221,7 +223,7 @@ class Library extends Component {
 }
 ```
 
-##### Estados
+#### Ejercicio
 
 Ejercicio, ahora actualicemos arreglos y objectos literales.
 
@@ -229,16 +231,16 @@ Ejercicio, ahora actualicemos arreglos y objectos literales.
 
 Dentro de estos estados manejemos un Formulario y veamos.
 
-##### Ej: Crear varios 'inputs' y manejar los estados
+##### Ex: Crear varios 'inputs' y manejar los estados
 
-# React Hooks
+## React Hooks
 
 Cambiemos todo el concepto. _**React Hooks**_ se puede usar desde _React 16.8_.
 Dado que el paradigma ha venido cambiando hacia ser funcional más que orientado a clases.
 Los **Hooks** hacen más sentido que tener que usar clases como lenguajes de programación.
 Ya que JS en la actulidad(2020) se orienta a funciones, y trata de ser funcional.
 
-## State
+### State
 
 Se usa `const [val, setVal] = useState(initValue)` el cual recibe un valor de inicialización y devuelve
 2 parametros, el 1º es el valor que se actuliza y el segundo es la función encargada de actulizar el valor.
@@ -246,3 +248,15 @@ Se usa `const [val, setVal] = useState(initValue)` el cual recibe un valor de in
 Miremos el ejemplo aquí: [https://codesandbox.io/s/admiring-haslett-teusl](https://codesandbox.io/s/admiring-haslett-teusl)
 
 ##### Ex: hagamos un componente similar a Form pero que sea React-Hooks
+
+### Life Cycle
+
+Es el encargado de los _ciclos de vida_ al usar _React Hooks_.
+Veamos un ejemplo: [https://codesandbox.io/s/goofy-hofstadter-slyrl](https://codesandbox.io/s/goofy-hofstadter-slyrl)
+
+## React Context
+
+Lo que permite esto es compartir funcionalidades transversales en nuestra aplicación.
+Y de esta forma poder consumirla más adelante en nuestros componentes
+
+> Mirar [Providers/WindowEvents](./src/providers/WindowEvents.jsx)
