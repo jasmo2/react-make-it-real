@@ -166,3 +166,61 @@ Tener encuenta que son los mismos que cuando controlamos el DOM pero con camelCa
 const saluda = () => alert("Hola!");
 <button onClick={saluda}></button>```
 ````
+
+# Componentes EN JSX
+
+Los componentes son formas de encapsular las logica de nuestros pedasos de UI
+y reutilizarlos más adelantes.
+
+## Stateless Components y Statefull components
+
+### Stateless
+
+```
+const Title = (props) => {
+  return <h1>{props.name}</h1>;
+};
+```
+
+Usualmente este componentes son solo usados para pintar y
+no tienen ningún tipo de logica.
+
+### Statefull
+
+Estos tienen usualmente logic de alguna indole.
+
+```
+class Library extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      title: '',
+      available: false,
+    };
+    // tenemos que enlazar el método al contexto actual
+    this.updateBook = this.updateText.bind(this);
+  }
+
+  updateBook(book) {
+    this.setState({ title: book.title, available: book.available })
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.updateBook('Guns, Germs, and Steel')
+    }, 1600);
+  }
+
+  render() {
+    <>
+      <input type="text" placeholder="Change title" />
+      <Title>{titel}</Title>
+    </>
+  }
+}
+```
+
+##### Estados
+
+Ejercicio, ahora actualicemos arreglos y objectos literales.
